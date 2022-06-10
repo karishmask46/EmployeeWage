@@ -6,8 +6,8 @@
        
         public static void Main(string[] args)
         {
-            UC4SwitchEmpWage CheckEmp = new UC4SwitchEmpWage();
-            CheckEmp.CalucalteEmpWage();
+            UC5MonthlyEmpWage CheckEmp = new UC5MonthlyEmpWage();
+            CheckEmp.CalculateWage();
    
         }
 
