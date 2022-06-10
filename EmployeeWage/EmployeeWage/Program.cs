@@ -6,13 +6,10 @@
        
         public static void Main(string[] args)
         {
-            UC5MonthlyEmpWage CheckEmp = new UC5MonthlyEmpWage();
-            CheckEmp.CalculateWage();
+            UC6HrsDayEmpWage CheckEmp = new UC6HrsDayEmpWage();
+            CheckEmp.CalucalteWage();
    
         }
-
-
-
     }
 }
 
