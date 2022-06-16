@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace EmployeeWage
 {
     internal class EmpWageComputation
-    {
+    {  
         public const int EmpWagePerHour = 20;
         public const int Full_Time_WorkingHrs_PerDay = 8;
         public const int Part_Time_WorkingHrs_PerDay = 4;
@@ -24,11 +24,21 @@ namespace EmployeeWage
 
                   
        private Dictionary<string, Company> Companies = new Dictionary<string, Company>();
+        public string[] Companylist;
+        public int Arrayindex = 0;
+        public EmpWageComputation(int number)
+        {
+            Companylist = new string[2 * number];
+        }
 
        public void AddCompany(string CompanyName, int EmpWagePerHour, int Full_Time_WorkingHrs_PerDay, int Part_Time_WorkingHrs_PerDay, int MAX_WORKING_HRS, int MAX_WORKING_DAYS)
         {
             Company company = new Company(CompanyName.ToLower(), EmpWagePerHour, Full_Time_WorkingHrs_PerDay, Part_Time_WorkingHrs_PerDay, MAX_WORKING_HRS, MAX_WORKING_DAYS);
             Companies.Add(CompanyName.ToLower(), company);
+            Companylist[Arrayindex] = CompanyName;
+            Arrayindex++;
+
+
         }
         public  int IsEmployeePresent()
         {
@@ -36,7 +46,7 @@ namespace EmployeeWage
         }
         public void CalucalteWage(string CompanyName)
         {
-            Console.WriteLine(CompanyName + " company details");
+            
             int Daynumber = 1;
             int EmpworkingHrs = 0;
             int TotalWorkingHrs = 0;
@@ -66,7 +76,17 @@ namespace EmployeeWage
 
 
             }
+            Companylist[Arrayindex] = Convert.ToString(TotalWorkingHrs);
+            Arrayindex++;
+
             Console.WriteLine("Total Working days : " + MAX_WORKING_DAYS + "\nTotal Working hours : " + (TotalWorkingHrs) + "\nTotal Wage :" + (TotalWage));
+        }
+        public void displayArray()
+        {
+            for (int i = 0; i < Companylist.Length; i +=2)
+            {
+                Console.WriteLine("Monthly Wage for {0} is {1}",Companylist[i], Companylist[i+1]);
+            }
         }
     }
 }
