@@ -16,6 +16,7 @@ namespace EmployeeWage
         public const int IS_FULL_TIME = 1;
         public const int IS_PART_TIME = 2;
         public const int IS_ABSENT = 0;
+        public int MonthlyWage = 0;
         float EmpDailyWage = 0;
         private float TotalWage = 0;
         public string CompanyName;
@@ -73,13 +74,14 @@ namespace EmployeeWage
                 TotalWage += EmpDailyWage;
                 Daynumber++;
                 TotalWorkingHrs += EmpworkingHrs;
+                MonthlyWage += EmpworkingHrs;
 
 
             }
-            Companylist[Arrayindex] = Convert.ToString(TotalWorkingHrs);
+            Companylist[Arrayindex] = Convert.ToString(MonthlyWage);
             Arrayindex++;
 
-            Console.WriteLine("Total Working days : " + MAX_WORKING_DAYS + "\nTotal Working hours : " + (TotalWorkingHrs) + "\nTotal Wage :" + (TotalWage));
+            Console.WriteLine("Total Working days : " + MAX_WORKING_DAYS + "\nTotal Working hours : " + (TotalWorkingHrs) + "\nTotal Wage :" + (TotalWage) +"\monthlywage: + (MonthlyWage));
         }
         public void displayArray()
         {
