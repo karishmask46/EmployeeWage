@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace EmployeeWage
 {
-    internal interface InterEmpWage
+    public interface InterfaceEmpComputation
     {
-        public void AddCompany(string CompanyName, int EmpWagePerHour, int Full_Time_WorkingHrs_perDay, int Part_Time_WorkingHrs_perDay, int MAX_WORKING_HRS, int MAX_WORKING_DAYS);
-        public void CalucalteWage(string CompanyName);
+        public void AddCompany(string CompanyName, int EmpWagePerhour, int FullTime_WorkingHrs_PerDay, int PartTime_WorkingHours_PerDay, int MAX_WORKING_HRS, int MAX_WORKING_DAYS);
+        public void CalculateEmpWage(string CompanyName);
     }
 }

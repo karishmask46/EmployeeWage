@@ -6,25 +6,28 @@ using System.Threading.Tasks;
 
 namespace EmployeeWage
 {
-    internal class Company
+    class Company
     {
-        public float EmpWagePerHour;
-        public int Full_Time_WorkingHrs_perDay;
-        public int Part_Time_WorkingHrs_perDay;
-        public int MAX_WORKING_HRS;
-        public int MAX_WORKING_DAYS;
+        
+          public string CompanyName;
+            public float EmpWagePerHour;
+            public int FullTime_WorkingHrs_PerDay;
+            public int PartTime_WorkingHours_PerDay;
+            public int MAX_WORKING_HRS;
+            public int MAX_WORKING_DAYS;
 
 
-        public string CompanyName;
-        public Company( string CompanyName, int EmpWagePerHour, int Full_Time_WorkingHrs_perDay, int Part_Time_WorkingHrs_perDay, int MAX_WORKING_HRS, int MAX_WORKING_DAYS)
-        {
-            this.CompanyName = CompanyName;
-            this.EmpWagePerHour = EmpWagePerHour;
-            this.Full_Time_WorkingHrs_perDay = Full_Time_WorkingHrs_perDay;
-            this.Part_Time_WorkingHrs_perDay = Part_Time_WorkingHrs_perDay;
-            this.MAX_WORKING_HRS = MAX_WORKING_HRS;
-            this. MAX_WORKING_DAYS = MAX_WORKING_DAYS;
-           
+            public Company(String CompanyName, int EmpWagePerhour, int FullTime_WorkingHrs_PerDay, int PartTime_WorkingHours_PerDay, int MAX_WORKING_HRS, int MAX_WORKING_DAYS)
+            {
+                this.CompanyName = CompanyName;
+                this.EmpWagePerHour = EmpWagePerhour;
+                this.FullTime_WorkingHrs_PerDay = FullTime_WorkingHrs_PerDay;
+                this.PartTime_WorkingHours_PerDay = PartTime_WorkingHours_PerDay;
+                this.MAX_WORKING_HRS = MAX_WORKING_HRS;
+                this.MAX_WORKING_DAYS = MAX_WORKING_DAYS;
+
+            }
+
+
         }
     }
-}
